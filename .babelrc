@@ -1,0 +1,11 @@
+{
+	"presets":[
+		[
+			"@babel/preset-env", //应用@babel/preset-env解析js
+			{
+				"useBuiltIns": "usage", //使用动态解析语法，根据兼容性转义
+				"corejs":3//使用core-js3版本的js库来对低版本浏览器做兼容
+			}
+		]
+	]
+}
