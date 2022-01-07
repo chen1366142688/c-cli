@@ -2,7 +2,7 @@
 const path = require('path') //nodeJS自带的
 const HtmlWebpackPlugin = require('html-webpack-plugin') //用于解析public中的HTML文件，把和src中的js文件关联起来
 module.exports = {
-  entry: { //入口文件
+  entry: { //入口文件,可以配置多个
     index: './src/test.js',
     test: './src/index.js'
   },
