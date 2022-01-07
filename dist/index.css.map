@@ -1,0 +1,1 @@
+{"version":3,"file":"index.css","mappings":"AAAA,MAGE,qBAAsB,CAEtB,YAAa,CADb,eAAiB,CAFjB,YAAa,CADb,WAKF,C","sources":["webpack://c-cli/./src/index.css"],"sourcesContent":[".test{\r\n  width: 200px;\r\n  height: 200px;\r\n  background-color: aqua;\r\n  font-weight: bold;\r\n  display: flex;\r\n}"],"names":[],"sourceRoot":""}

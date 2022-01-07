@@ -1,9 +1,13 @@
 $color:blue;
 .test{
-  width: 200px;
-  height: 200px;
-  border: 1px solid $color;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  .box{
+    width: 200px;
+    height: 200px;
+    background-color: $color;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid; 
+  }
 }

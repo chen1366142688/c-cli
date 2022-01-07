@@ -1,5 +1,4 @@
 import './index.css'
-import './test.scss'
 import reba from '@/assets/reba.jpg'
 console.log('hello webpack nice')
 new Promise((resolve) => { 

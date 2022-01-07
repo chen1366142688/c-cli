@@ -35,7 +35,7 @@ module.exports = merge(base, {
 	},
   plugins: [ //修改文件后构建的时候会生成一个新的文件，生成新的hash值，浏览器返回的时候就访问到的永远是最新的那个文件，而且会把之前的文件直接替换掉
     new CleanWebpackPlugin(),
-    //配置样式抽取插件，生成的css文件名称为[name],[name]为entry中定义的key
+    //配置样式抽取插件，生成的css文件名称为[name],[name]为entry中定义的key，生成外部文件，避免所有css都打包到bundlejs中
     new MiniCssExtractPlugin({
       //这个方括号name和HTMLWEbpackPlugin的chunks是一个意思
       //和output中的filename也是一个意思，它会识别entry里的key
