@@ -7,5 +7,14 @@
 				"corejs":3//使用core-js3版本的js库来对低版本浏览器做兼容
 			}
 		]
-	]
+	],
+    "plugins":[
+        [
+            "component",
+            {
+                "libraryName": "element-plus",
+                "styleLibraryName": "theme-chalk"
+            }
+        ]
+    ]
 }

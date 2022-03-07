@@ -1,0 +1,1 @@
+{"version":3,"file":"test.css","mappings":"AACC,MAEC,UADA,YACA,C","sources":["webpack://c-cli/./src/views/test.vue"],"sourcesContent":["\r\n\t.test{\r\n\t\tdisplay: flex;\r\n\t\tcolor: red;\r\n\t}\r\n"],"names":[],"sourceRoot":""}

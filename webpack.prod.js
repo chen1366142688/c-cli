@@ -6,12 +6,17 @@ const base = require('./webpack.base.js')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 //引入抽取css样式插件
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CompressionPlugin = require("compression-webpack-plugin")
+const CopyPlugin = require('copy-webpack-plugin');
+const path = require('path')
+
+
 module.exports = merge(base, {
   mode: 'production',
   devtool: 'source-map', //独立配置源代码映射 如果报错就会在源代码中找到，不配置就在index.bundle.js中，功能就是便于查找错误位置
-  output: {
-    filename: '[name]-[hash].bundle.js'
-  },
+//   output: {
+//     filename: '[name]-[hash].bundle.js'
+//   },
   module:{
 		rules:[
 			{
@@ -37,9 +42,26 @@ module.exports = merge(base, {
     new CleanWebpackPlugin(),
     //配置样式抽取插件，生成的css文件名称为[name],[name]为entry中定义的key，生成外部文件，避免所有css都打包到bundlejs中
     new MiniCssExtractPlugin({
-      //这个方括号name和HTMLWEbpackPlugin的chunks是一个意思
-      //和output中的filename也是一个意思，它会识别entry里的key
-			filename:'[name].css'
-		})
+        //这个方括号name和HTMLWEbpackPlugin的chunks是一个意思
+        //和output中的filename也是一个意思，它会识别entry里的key
+        filename:'[name].css'
+    }),
+    new CompressionPlugin({
+        algorithm: "gzip",
+        test: /\.js$|\.html$|\.css$/,
+        threshold: 10240,
+        minRatio: 0.8
+    }),
+    new CopyPlugin({
+        patterns: [
+            { 
+                from: path.resolve(__dirname,'public'),
+                to: path.resolve(__dirname,'dist')
+            },
+        ],
+        options: {
+            concurrency: 100,
+        },
+    })
   ]
 })

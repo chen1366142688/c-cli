@@ -2,33 +2,28 @@
   "name": "c-cli",
   "version": "1.0.0",
   "description": "mike test cli",
-  "main": "index.js",
-  "scripts": {
-    "test": "webpack --config webpack.base.js --color --progress",
-    "serve": "webpack serve --config webpack.dev.js --color --progress --hot",
-    "build": "webpack --config webpack.prod.js --color --progress"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/chen1366142688/c-cli.git"
-  },
-  "keywords": [
-    "cli",
-    "mike",
-    "webpack",
-    "chen"
-  ],
   "author": "mike_chen",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/chen1366142688/c-cli/issues"
+  "scripts": {
+    "serve": "webpack serve --config webpack.dev.js --color --progress --hot",
+    "build": "webpack --config webpack.prod.js --color --progress",
+    "test": "webpack --config webpack.base.js --color --progress"
   },
-  "homepage": "https://github.com/chen1366142688/c-cli#readme",
+  "main": "index.js",
+  "dependencies": {
+    "core-js": "^3.20.2",
+    "element-plus": "^1.0.2-beta.28",
+    "vue": "^3.2.31",
+    "vue-loader": "^17.0.0",
+    "vue-router": "^4.0.13"
+  },
   "devDependencies": {
     "@babel/core": "^7.16.7",
     "@babel/preset-env": "^7.16.7",
     "babel-loader": "^8.2.3",
+    "babel-plugin-component": "^1.1.1",
     "clean-webpack-plugin": "^4.0.0",
+    "compression-webpack-plugin": "^9.2.0",
+    "copy-webpack-plugin": "^10.2.4",
     "css-loader": "^6.5.1",
     "cssnano": "^5.0.14",
     "file-loader": "^6.2.0",
@@ -40,12 +35,27 @@
     "sass": "^1.46.0",
     "sass-loader": "^12.4.0",
     "style-loader": "^3.3.1",
+    "vue-cli-plugin-element-plus": "~0.0.13",
+    "vue-template-compiler": "^2.6.14",
     "webpack": "^5.65.0",
+    "webpack-bundle-analyzer": "^4.5.0",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.7.2",
     "webpack-merge": "^5.8.0"
   },
-  "dependencies": {
-    "core-js": "^3.20.2"
+  "bugs": {
+    "url": "https://github.com/chen1366142688/c-cli/issues"
+  },
+  "homepage": "https://github.com/chen1366142688/c-cli#readme",
+  "keywords": [
+    "cli",
+    "mike",
+    "webpack",
+    "chen"
+  ],
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chen1366142688/c-cli.git"
   }
 }

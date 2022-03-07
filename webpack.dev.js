@@ -10,7 +10,7 @@ module.exports = merge(base, {
       path.resolve(__dirname, 'public'),
     ],
     host: 'localhost',
-    port: 8080,
+    port: 9999,
     open: true
   },
   module: {
